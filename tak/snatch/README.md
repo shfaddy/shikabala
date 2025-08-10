@@ -9,7 +9,7 @@ shift 12
 
 attack 9
 decay 5
-sustain 8
+sustain 50
 release 8
 
 ```

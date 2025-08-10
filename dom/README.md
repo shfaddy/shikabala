@@ -1,8 +1,33 @@
 # Dom Sound Design
 
+## Bone Phone
+
+```scenario oscilla
+
+import gogobell
+
+gogobell bone .
+
+pitch -20
+
+attack 16
+decay 16
+sustain 0
+release 16
+position .75
+
+
+pressure 5
+
+gain 1-(1/2^3)
+
+```
+
 ## Sub Phone
 
 ```scenario oscilla
+
+~ dom .
 
 import sine
 

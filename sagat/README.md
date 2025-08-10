@@ -2,42 +2,10 @@
 
 ```scenario oscilla
 
-chord 2
+import tambourine
 
-step attach + $chord / 2^7
+tambourine shakaliel
 
-pitch attach + 40
-
-distance 1
-
-```
-
-## Sub Phones
-
-```scenario oscilla
-
-import sine
-
-sine sub
-
-```
-
-## Body Phones
-
-```scenario oscilla
-
-import fm
-
-fm body
-
-```
-
-## Snatch Phones
-
-```scenario oscilla
-
-import noise
-
-noise snatch
+pitch attach + 30
 
 ```

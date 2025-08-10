@@ -2,7 +2,7 @@
 
 ```scenario oscilla
 
-tempo 75
+tempo 90
 
 measure 4
 
@@ -11,6 +11,7 @@ sound tak
 sound sak
 sound sik
 sound sagat
+sound teet
 
 ```
 
@@ -22,9 +23,7 @@ sound sagat
 
 ```scenario xoscilla
 
---produce nota
-
-sik --read from ~ nota 4x4.md
+sak --read from ~ .4x4.md
 
 ```
 

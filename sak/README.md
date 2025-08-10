@@ -2,35 +2,44 @@
 
 ```scenario oscilla
 
-chord 2
-
 --read from ~ tak README.md
 
+```
+
+```scenario oscilla
+
 sub --read from ~ tak sub README.md
+
 body --read from ~ tak body README.md
+
 snatch --read from ~ tak snatch README.md
+
+```
+
+```scenario oscilla
+
+length attach / 2^6
+
+pitch attach + 12
+
+distance attach + 2
 
 sub .
 
-attack attach + 3
-decay attach + 3
-release attach + 3
+decay attach + 2
+sustain attach + 20
+
+sweep attach - 20
 
 .. body .
 
-attack attach + 1
-decay attach + 1
-release attach + 1
+decay attach + 2
+sustain attach + 20
+
+sweep attach - 20
 
 .. snatch .
 
-attack attach + 1
-decay attach + 1
-
-~ sak .
-
-pitch attach + 10 + $chord * 10
-
-distance 2
+sustain attach + 20
 
 ```

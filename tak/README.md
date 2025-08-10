@@ -4,6 +4,16 @@
 
 ```scenario oscilla
 
+pitch attach + 4
+
+import gogobell
+
+gogobell bone
+
+```
+
+```scenario oscilla
+
 import sine
 
 sine sub
