@@ -17,13 +17,7 @@ sound teet
 
 ```scenario oscilla
 
---read nota.md
-
-```
-
-```scenario xoscilla
-
-sak --read from ~ .4x4.md
+--produce nota
 
 ```
 
