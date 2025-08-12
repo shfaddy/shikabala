@@ -28,4 +28,22 @@ pitch 6
 
 yallah 7/8
 
+length 1/4
+pitch 1a
+distance 1
+
+yallah 0/16
+
+length 3/4
+
+yallah 1/16
+
+length 1/4
+
+yallah 4/16
+
+length 3/4
+
+yallah 5/16
+
 ```
