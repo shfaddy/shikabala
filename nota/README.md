@@ -43,3 +43,21 @@
 ~ --read nota section.2.md
 
 ```
+
+## Section 3
+
+```scenario oscilla
+
+~ --read nota section.3.md
+
+```
+
+## Section 3 Again
+
+```scenario oscilla
+
+~ --read nota section.3.md
+
+```
+
+``
