@@ -2,9 +2,13 @@
 
 ```scenario oscilla
 
-length 1/2^5
+length attach / 2^3
 
-distance 2
+pitch -20
+
+distance 3
+
+attack 4
 
 --reproduce 2nd
 

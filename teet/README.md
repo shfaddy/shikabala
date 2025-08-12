@@ -6,8 +6,6 @@
 
 chord 6
 
-distance 2
-
 distance attach + $chord/6
 
 pitch attach + 6
@@ -38,7 +36,7 @@ import sine
 
 sine sub .
 
-distance 2
+distance 4
 
 attack 3
 decay 3

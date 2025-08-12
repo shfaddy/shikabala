@@ -22,4 +22,13 @@ pitch 0
 
 yallah 4/8
 
+length 1/2
+pitch f
+
+yallah 5/8
+
+pitch 10
+
+yallah 6/8
+
 ```

@@ -10,6 +10,8 @@
 
 sub --read from ~ tak sub README.md
 
+bone --read from ~ tak bone README.md
+
 body --read from ~ tak body README.md
 
 snatch --read from ~ tak snatch README.md
@@ -18,7 +20,7 @@ snatch --read from ~ tak snatch README.md
 
 ```scenario oscilla
 
-length attach / 2^6
+length attach / 2^3
 
 pitch attach + 12
 

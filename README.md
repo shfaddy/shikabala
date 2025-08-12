@@ -2,16 +2,12 @@
 
 ```scenario oscilla
 
-tempo 90
+tempo 97.5
 
 measure 4
 
-sound dom
-sound tak
-sound sak
-sound sik
-sound sagat
-sound teet
+--read mixer.md
+
 
 ```
 

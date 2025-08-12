@@ -4,7 +4,7 @@
 
 ```scenario xoscilla
 
-~ sik .
+~ sak .
 
 --read from ~ nota tempo.md
 
