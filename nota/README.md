@@ -61,3 +61,21 @@
 ```
 
 ``
+
+## Section 4
+
+```scenario oscilla
+
+~ --read nota section.4.md
+
+```
+
+## Section 4 Again
+
+```scenario oscilla
+
+~ --read nota section.4.md
+
+```
+
+``
