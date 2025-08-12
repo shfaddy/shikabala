@@ -2,9 +2,9 @@
 
 ## Tempo
 
-```scenario xoscilla
+```scenario oscilla
 
-~ sak .
+~ sik .
 
 --read from ~ nota tempo.md
 
@@ -13,8 +13,6 @@
 ## Section 1
 
 ```scenario oscilla
-
-~ step attach - 1
 
 ~ --read nota section.1.md
 
