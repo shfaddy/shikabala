@@ -3,6 +3,12 @@
 ```scenario oscilla
 
 length 1/2
+pitch 10
+distance 1
+
+yallah -1/8
+
+length 1/2
 pitch 0
 distance 0
 

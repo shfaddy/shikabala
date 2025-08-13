@@ -16,8 +16,6 @@ length attach / 2^(8+$chord)
 
 pitch attach + 30 + $chord * -10
 
-distance 2
-
 distance attach + $chord/3
 
 ```

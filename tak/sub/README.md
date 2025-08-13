@@ -6,8 +6,8 @@ distance 0
 
 pitch 0
 
-sweep 60
-shift 23
+sweep 40
+shift 10
 
 attack 8
 decay 8

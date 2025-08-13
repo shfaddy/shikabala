@@ -9,14 +9,16 @@ sound sik
 sound sagat
 sound teet
 
-~ dom distance attach +  (1/2)
+~ dom distance attach + 0
 
 ~ tak distance attach +  1
 
 ~ sak distance attach +  2
 
-~ sagat distance attach +  2
+~ sik distance attach + 1
 
-~ teet distance attach + 3
+~ sagat distance attach +  1
+
+~ teet distance attach + 2
 
 ```

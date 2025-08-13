@@ -38,8 +38,6 @@
 
 --read from ~ nota shikabala.finale.md
 
-~ sik .
-
 --read from ~ nota wenoss.md
 
 ```

@@ -76,6 +76,22 @@
 
 ```
 
+## Section 2: Yallah
+
+```scenario oscilla
+
+~ --read nota section.2.md
+
+```
+
+## Section 2 Again
+
+```scenario oscilla
+
+~ --read nota section.2.md
+
+```
+
 ## Section 5
 
 ```scenario oscilla

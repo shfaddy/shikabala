@@ -33,7 +33,6 @@ pitch 14
 
 yallah 7/8
 
-length 2
 pitch 15
 
 yallah 8/8
