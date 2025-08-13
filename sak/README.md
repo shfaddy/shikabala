@@ -20,14 +20,14 @@ snatch --read from ~ tak snatch README.md
 
 ```scenario oscilla
 
-length attach / 2^3
+length attach / 2^1
 
 pitch attach + 12
 
 distance attach + 2
 
 sub .
-
+attack attach + 2
 decay attach + 2
 sustain attach + 20
 

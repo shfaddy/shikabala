@@ -76,4 +76,18 @@
 
 ```
 
-``
+## Section 5
+
+```scenario oscilla
+
+~ --read nota section.1.md
+
+```
+
+## Section 5 & Finale
+
+```scenario oscilla
+
+~ --read nota section.5.md
+
+```
