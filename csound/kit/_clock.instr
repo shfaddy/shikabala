@@ -1,0 +1,11 @@
+giMeasure init 0
+giTempo init 0
+
+instr $_clock, _clock
+
+giMeasure init p3
+giTempo init p4
+
+p3 init 0
+
+endin

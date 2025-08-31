@@ -1,0 +1,79 @@
+giMandol ftgen 0, 0, 8192, 1, "prerequisites/mandpluk.aiff", 0, 0, 0
+
+instr $guitar, guitar
+
+#include "kit/ornaments.orc"
+
+iAttack init p3 / 2^8
+iDecay init p3 / 2^1
+iRelease init p3 - iAttack - iDecay
+
+iSustain init 1/2^2
+
+kAmplitude adsr iAttack, iDecay, iSustain, iRelease
+
+iFrequency init 2^( p5 + ( ( giKey + p4 ) / 16 ) )
+
+iAttack init p3 / 2^6
+iDecay init p3 / 2^1
+iRelease init p3 - iAttack - iDecay
+
+kFrequency linseg iFrequency * 2^4, iAttack, iFrequency, iDecay, iFrequency * 2^( 1/2^10 ), iRelease, iFrequency * 2^( 1/2^8 )
+
+iDetune init 1/2^7
+
+kDetune rspline 2^( -iDetune/16 ), 2^( iDetune/16 ), 0, p3
+
+aWave = 0
+
+iSize init 2
+
+aShape vco2 kAmplitude, kFrequency / 1, 10, .95
+
+aWave += aShape / iSize / 1
+
+aClip rspline 0, 1, 0, giMeasure; * 8
+
+aSkew rspline 0, 1, 0, giMeasure; * 8
+
+aBody squinewave a ( kFrequency ), aClip, aSkew
+
+aBody *= kAmplitude
+
+aWave += aBody / iSize
+
+aBodyHigh squinewave a ( kFrequency * 2^1 ), aClip, aSkew
+
+aBodyHigh *= kAmplitude
+
+aWave += aBodyHigh / iSize
+
+aBodyHigh2 squinewave a ( kFrequency * 2^2 ), aClip, aSkew
+
+aBodyHigh2 *= kAmplitude
+
+aWave += aBodyHigh2 / iSize
+
+aPluck pluck kAmplitude, kFrequency * 1, iFrequency, 0, 5, 1, 0
+
+; aWave += aPluck / iSize
+
+kPluck init .4
+
+kDetune init 1
+
+kGain init 1
+
+kSize init .95
+
+aMandolin mandol kAmplitude, iFrequency / 2^0, kPluck, kDetune, kGain, kSize, giMandol
+
+; aWave += aMandolin / iSize
+
+aNote butterlp aWave, kFrequency * 2^2
+
+aNote butterhp aNote, kFrequency / 2^0
+
+gaNote [ p7 ] = gaNote [ p7 ] + aNote / 2^p6
+
+endin

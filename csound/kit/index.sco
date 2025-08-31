@@ -1,0 +1,9 @@
+#define _clock #1.#
+#define _key #2.#
+#define _loopback #3.#
+#define _mixer #4.#
+#define beep #5.#
+#define bow #6.#
+#define dom #7.#
+#define guitar #8.#
+#define tak #9.#

@@ -1,0 +1,7 @@
+giKey init 0
+
+instr $_key, _key
+
+giKey init p4
+
+endin

@@ -1,0 +1,11 @@
+gaNote [] init nchnls
+
+instr $_mixer, _mixer
+
+aNote clip gaNote [ p4 ], 1, 0dbfs
+
+outch p4 + 1, aNote
+
+gaNote [ p4 ] = 0
+
+endin
