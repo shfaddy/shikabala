@@ -1,17 +1,21 @@
-#include "nota/lead.sco"
-#include "nota/shikabala.sco"
+#define instrument #bow#
 
-#include "nota/response.sco"
-#include "nota/shikabala.response.sco"
+#include "nota/shikabala.melody.sco"
 
-#include "nota/wenoss.sco"
+#define instrument #beep#
 
-$after(1)
+#include "nota/shikabala.melody.sco"
 
-#include "nota/lead.sco"
-#include "nota/hala.sco"
+#include "nota/maqsum.sco"
 
-#include "nota/response.sco"
-#include "nota/hala.response.sco"
+$at( $clock + 1 )
 
-#include "nota/wenoss.sco"
+#define instrument #bow#
+
+#include "nota/hala.melody.sco"
+
+#define instrument #beep#
+
+#include "nota/hala.melody.sco"
+
+#include "nota/maqsum.sco"

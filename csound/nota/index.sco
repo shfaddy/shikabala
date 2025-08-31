@@ -15,20 +15,23 @@ $at( $clock )
 
 $at( $clock )
 
-/*
-
 #include "nota/ostoora-shatoora-kora-soora.sco"
 
-$at(8)
+#define clock #8#
+
+$at( $clock )
 
 #include "nota/shikabala-hala.sco"
 
-$at(10)
+#define clock #10#
+
+$at( $clock )
 
 #include "nota/shikabala-hala.sco"
 
-$at(12)
+#define clock #12#
 
-*/
+$at( $clock )
+
 
 i $_loopback.0 0 1

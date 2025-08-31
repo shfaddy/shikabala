@@ -1,3 +1,5 @@
+gaBeep [] init nchnls
+
 instr $beep, beep
 
 #include "kit/ornaments.orc"
@@ -11,7 +13,7 @@ aAmplitude linseg 0, iAttack, 1, iDecay, iSustain
 
 iFrequency init 2^( p5 + ( ( giKey + p4 ) / 16 ) )
 
-aFrequency linsegr iFrequency * 2^(4/16), p3 / 2^5, iFrequency, iDecay, iFrequency * 2^(-4/16)
+aFrequency linsegr iFrequency * 2^(4/16), iAttack / 2, iFrequency, iDecay / 2, iFrequency * 2^(-4/16)
 
 aClip rspline 0, 1, 0, giMeasure
 
@@ -31,6 +33,34 @@ aNote butterlp aNote, aFrequency * 2^2
 
 aNote butterhp aNote, aFrequency / 2^2
 
-gaNote [ p7 ] = gaNote [ p7 ] + aNote / 2^p6
+gaBeep [ p7 ] = gaBeep [ p7 ] + aNote / 2^p6
+
+endin
+
+instr _beep
+
+aBeepLeft = gaBeep [ 0 ]
+aBeepRight = gaBeep [ 1 ]
+
+denorm aBeepLeft
+denorm aBeepRight
+
+seed 0
+
+kRoom rspline 0, 1, 1 / giMeasure, giMeasure
+kDamp rspline 0, 1, 1 / giMeasure, giMeasure
+
+aReverbLeft, aReverbRight freeverb aBeepLeft, aBeepRight, kRoom, kDamp
+
+kReverb rspline 1, 2^2, 1 / giMeasure, giMeasure
+
+aLeft = aBeepLeft + aReverbLeft / kReverb
+aRight = aBeepRight + aReverbRight / kReverb
+
+gaNote [ 0 ] = gaNote [ 0 ] + aLeft
+gaNote [ 1 ] = gaNote [ 1 ] + aRight
+
+gaBeep [ 0 ] = 0
+gaBeep [ 1 ] = 0
 
 endin

@@ -1,6 +1,6 @@
 { 2 channel
 
-i $bow.$channel 0 [1/4] 12 $octave $distance $channel $ornaments
+i $note.$channel 0 [1/4] 12 $octave $distance $channel $ornaments
 
 i . + . 9
 
