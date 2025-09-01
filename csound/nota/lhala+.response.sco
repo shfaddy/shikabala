@@ -1,0 +1,20 @@
+{ 2 channel
+
+i $note.$channel 0 [1/16] 6 $octave $distance $channel
+
+
+i . + [3/16]
+
+i . + [1/16]
+
+i . + [3/16]
+
+i . + [1/16] 10
+
+i . + [3/16]
+
+i . + [1/16]
+
+i . + [3/16]
+
+}

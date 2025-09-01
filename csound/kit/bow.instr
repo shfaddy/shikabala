@@ -75,6 +75,10 @@ aZz butterhp aZz, kFrequency * kFilter / 2^1
 
 aNote += aZz
 
+aNote butterlp aNote, kFrequency * 2^4
+
+aNote butterhp aNote, kFrequency / 2^2
+
 gaBow [ p7 ] = gaBow [ p7 ] + aNote / 2^p6
 
 endin
@@ -89,10 +93,16 @@ denorm aBowRight
 
 seed 0
 
-kRoom rspline 0, 1, 1 / giMeasure, giMeasure
+kRoom rspline 1/2, 1, 1 / giMeasure, giMeasure
 kDamp rspline 0, 1, 1 / giMeasure, giMeasure
 
 aReverbLeft, aReverbRight freeverb aBowLeft, aBowRight, kRoom, kDamp
+
+kFilter rspline 2^9, 2^10, 1 / giMeasure, giMeasure
+
+aReverbLeft tone aReverbLeft, kFilter
+
+aReverbRight tone aReverbRight, kFilter
 
 kReverb rspline 1, 2^2, 1 / giMeasure, giMeasure
 

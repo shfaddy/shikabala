@@ -33,5 +33,34 @@ $at( $clock )
 
 $at( $clock )
 
+#include "nota/shaghala-udya-lhala-lhala-shikabala.sco"
+
+#define clock #22#
+
+$at( $clock )
+
+#include "nota/shikabala-hala.sco"
+
+#define clock #24#
+
+$at( $clock )
+
+#include "nota/shikabala-hala.sco"
+
+#define clock #26#
+
+$at( $clock )
+
+#include "nota/ostoora-shatoora-kora-soora.sco"
+
+#define clock #30#
+
+$at( $clock )
+
+#include "nota/ostoora-shatoora-kora-finale.sco"
+
+#define clock #34#
+
+$at( $clock )
 
 i $_loopback.0 0 1
