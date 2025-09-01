@@ -63,4 +63,6 @@ $at( $clock )
 
 $at( $clock )
 
-i $_loopback.0 0 1
+f 0 1
+
+;i $_loopback.0 0 1

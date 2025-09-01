@@ -1,9 +1,9 @@
 { 2 channel
 
-i $note.$channel [10/16] [1/16] 10 $octave $distance $channel $ornaments
+i $note.$channel [10/16] [1/16] -6 $octave $distance $channel $ornaments
 
 i . + .
 
-i . + . 16
+i . + . 0
 
 }

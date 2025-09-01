@@ -75,9 +75,9 @@ aZz butterhp aZz, kFrequency * kFilter / 2^1
 
 aNote += aZz
 
-aNote butterlp aNote, kFrequency * 2^4
+; aNote butterlp aNote, kFrequency * 2^4
 
-aNote butterhp aNote, kFrequency / 2^2
+; aNote butterhp aNote, kFrequency / 2^2
 
 gaBow [ p7 ] = gaBow [ p7 ] + aNote / 2^p6
 
@@ -108,6 +108,9 @@ kReverb rspline 1, 2^2, 1 / giMeasure, giMeasure
 
 aLeft = aBowLeft + aReverbLeft / kReverb
 aRight = aBowRight + aReverbRight / kReverb
+
+aLeft clip aLeft, 1, 0dbfs
+aRight clip aRight, 1, 0dbfs
 
 gaNote [ 0 ] = gaNote [ 0 ] + aLeft
 gaNote [ 1 ] = gaNote [ 1 ] + aRight

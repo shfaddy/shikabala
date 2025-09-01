@@ -57,6 +57,9 @@ kReverb rspline 1, 2^2, 1 / giMeasure, giMeasure
 aLeft = aBeepLeft + aReverbLeft / kReverb
 aRight = aBeepRight + aReverbRight / kReverb
 
+aLeft clip aLeft, 1, 0dbfs
+aRight clip aRight, 1, 0dbfs
+
 gaNote [ 0 ] = gaNote [ 0 ] + aLeft
 gaNote [ 1 ] = gaNote [ 1 ] + aRight
 

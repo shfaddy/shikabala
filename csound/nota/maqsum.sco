@@ -2,7 +2,7 @@
 
 { 2 channel
 
-i $dom. $channel 0 1 0 $octave $distance $channel $ornaments
+i $dom.$channel 0 1 0 $octave $distance $channel $ornaments
 
 i . [2/4] .
 
