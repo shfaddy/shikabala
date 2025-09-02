@@ -4,8 +4,8 @@ instr $beep, beep
 
 #include "kit/ornaments.orc"
 
-iAttack init p3 / 2^5
-iDecay init p3 / 2^3
+iAttack init p3 / 2^4
+iDecay init p3 / 2^4
 
 iSustain init 0
 
@@ -13,7 +13,7 @@ aAmplitude linseg 0, iAttack, 1, iDecay, iSustain
 
 iFrequency init 2^( p5 + ( ( giKey + p4 ) / 16 ) )
 
-aFrequency linsegr iFrequency * 2^(4/16), iAttack / 2, iFrequency, iDecay / 2, iFrequency * 2^(-4/16)
+aFrequency linsegr iFrequency * 2^(4/16), iAttack / 2^3, iFrequency, iDecay / 2, iFrequency * 2^(-4/16)
 
 aClip rspline 0, 1, 0, giMeasure
 
@@ -21,13 +21,13 @@ aSkew rspline -1, 1, 0, giMeasure
 
 aNote squinewave aFrequency, aClip, aSkew
 
-aNote *= aAmplitude
+aNote *= aAmplitude / 2
 
 aAmplitude linseg 0, iAttack, 1, p3 - iAttack, iSustain
 
 aPluck pluck k ( aAmplitude ), k ( aFrequency ) / 2^0, iFrequency, 0, 1
 
-aNote += aPluck
+aNote += aPluck / 2
 
 aNote butterlp aNote, aFrequency * 2^2
 
@@ -47,12 +47,12 @@ denorm aBeepRight
 
 seed 0
 
-kRoom rspline 0, 1, 1 / giMeasure, giMeasure
+kRoom rspline 1/4, 1, 1 / giMeasure, giMeasure
 kDamp rspline 0, 1, 1 / giMeasure, giMeasure
 
 aReverbLeft, aReverbRight freeverb aBeepLeft, aBeepRight, kRoom, kDamp
 
-kReverb rspline 1, 2^2, 1 / giMeasure, giMeasure
+kReverb rspline 2^0, 2^2, 1 / giMeasure, giMeasure
 
 aLeft = aBeepLeft + aReverbLeft / kReverb
 aRight = aBeepRight + aReverbRight / kReverb
